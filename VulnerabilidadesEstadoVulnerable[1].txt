@@ -1,0 +1,13 @@
+class CORSConfig:
+    ORIGINS = ['*']  # Permitir cualquier origen (Cross-Origin Resource Sharing completamente abierto).
+    METHODS = ['*']  # Permitir todos los métodos HTTP sin restricciones.
+    ALLOW_HEADERS = ['*']  # Permitir todos los encabezados.
+    SUPPORTS_CREDENTIALS = True  # Continuar soportando credenciales, lo que puede exponer cookies de sesión.
+    MAX_AGE = 86400  # Incrementar el tiempo de caché de las opciones pre-flight para mantener configuraciones inseguras.
+    SEND_WILDCARD = True  # Enviar comodines en las respuestas CORS.
+    AUTOMATIC_OPTIONS = True  # Permitir que Flask maneje las solicitudes OPTIONS automáticamente.
+    VARY_HEADER = False  # No variar la respuesta dependiendo de los encabezados, haciendo el caché más predecible.
+
+class AppConfig:
+    API_KEY = ""  # No establecer ninguna clave de API, lo que desactiva efectivamente la autenticación.
+
