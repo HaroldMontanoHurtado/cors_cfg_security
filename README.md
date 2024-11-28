@@ -1,1 +1,1 @@
-# cors_cfg_security
+# Modifications to CORS security configurations
